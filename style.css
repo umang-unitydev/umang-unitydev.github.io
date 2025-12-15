@@ -218,13 +218,13 @@ a {
 
 .project-thumb {
   width: 100%;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 1 / 1;      /* forces square */
   object-fit: cover;
-  padding: 12px;
-  background: #020617;
 
   border-radius: 14px;
-  box-shadow: 0 0 12px rgba(0, 229, 255, 0.25);
+  margin-bottom: 15px;
+
+  box-shadow: 0 0 15px rgba(0, 229, 255, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
