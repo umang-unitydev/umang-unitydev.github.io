@@ -232,3 +232,42 @@ a {
   transform: scale(1.06);
   box-shadow: 0 0 30px rgba(0, 229, 255, 0.7);
 }
+
+#skills {
+  margin: 60px 20px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  margin-top: 25px;
+}
+
+.skill-card {
+  background: rgba(15, 23, 42, 0.6);
+  border-radius: 16px;
+  padding: 25px;
+  text-align: center;
+
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  box-shadow: 0 0 15px rgba(0, 229, 255, 0.15);
+
+  transition: all 0.3s ease;
+}
+
+.skill-card h3 {
+  color: #38bdf8;
+  margin: 12px 0 6px;
+}
+
+.skill-card p {
+  font-size: 14px;
+  color: #94a3b8;
+}
+
+.skill-card:hover {
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 0 30px rgba(0, 229, 255, 0.5);
+  border-color: #00e5ff;
+}
