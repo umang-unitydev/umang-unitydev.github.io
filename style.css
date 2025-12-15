@@ -68,3 +68,12 @@ a {
   background: #22c55e !important;
   color: #020617 !important;
 }
+
+.profile-img {
+    width: 140px;        /* control size */
+    height: 140px;
+    border-radius: 50%;  /* circle image */
+    object-fit: cover;
+    border: 3px solid #00e5ff; /* neon gaming border */
+    box-shadow: 0 0 15px rgba(0, 229, 255, 0.6);
+}
