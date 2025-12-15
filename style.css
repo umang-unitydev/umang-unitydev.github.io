@@ -82,6 +82,21 @@ a {
   border: 4px solid #38bdf8;
   box-shadow: 0 0 25px #38bdf8;
   margin-bottom: 20px;
+  object-fit: cover;
+
+  animation: pulse 3s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 15px #38bdf8;
+  }
+  50% {
+    box-shadow: 0 0 35px #38bdf8;
+  }
+  100% {
+    box-shadow: 0 0 15px #38bdf8;
+  }
 }
 
 .hero h1 {
@@ -137,4 +152,68 @@ a {
 
 .project-links a:hover {
     color: #ffffff;
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Animated gradient overlay */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle,
+    rgba(56, 189, 248, 0.15),
+    transparent 60%
+  );
+  animation: rotateGlow 10s linear infinite;
+}
+
+@keyframes rotateGlow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Keep content above glow */
+.hero * {
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 {
+  animation: slideDown 1s ease forwards;
+}
+
+.tagline {
+  animation: fadeIn 2s ease forwards;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
