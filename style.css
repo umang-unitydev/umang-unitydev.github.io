@@ -219,7 +219,7 @@ a {
 .project-thumb {
   width: 100%;
   aspect-ratio: 1 / 1;
-  object-fit: contain;   /* IMPORTANT FIX */
+  object-fit: cover;
   padding: 12px;
   background: #020617;
 
