@@ -335,3 +335,39 @@ a {
 html {
   scroll-behavior: smooth;
 }
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  color: #38bdf8;
+  cursor: pointer;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 65px;
+    right: 20px;
+
+    flex-direction: column;
+    gap: 15px;
+
+    background: rgba(2, 6, 23, 0.95);
+    backdrop-filter: blur(10px);
+
+    padding: 20px;
+    border-radius: 12px;
+
+    display: none;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+}
