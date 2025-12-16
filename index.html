@@ -349,11 +349,11 @@ tilt.addEventListener("mousemove", (e) => {
   const centerX = rect.width / 2;
   const centerY = rect.height / 2;
 
-  const rotateX = (centerY - y) / 24;
-  const rotateY = (x - centerX) / 24;
+  const rotateX = (centerY - y) / 6;
+  const rotateY = (x - centerX) / 6;
 
   img.style.transform = `
-    scale(1.08)
+    scale(1.5)
     rotateX(${rotateX}deg)
     rotateY(${rotateY}deg)
   `;
