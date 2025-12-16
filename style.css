@@ -118,6 +118,11 @@ a {
   margin-top: 10px;
 }
 
+#typing {
+  color: #38bdf8;
+  text-shadow: 0 0 12px rgba(56, 189, 248, 0.6);
+}
+
 .cursor {
   color: #38bdf8;
   font-weight: bold;
@@ -442,9 +447,4 @@ body {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
-}
-
-#typing {
-  color: #38bdf8;
-  text-shadow: 0 0 12px rgba(56, 189, 248, 0.6);
 }
