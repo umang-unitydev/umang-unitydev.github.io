@@ -1,8 +1,23 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: radial-gradient(circle at top, #020617, #000000);
   color: #e5e7eb;
+
+  background: linear-gradient(
+    120deg,
+    #020617,
+    #020617,
+    #001f3f,
+    #020617
+  );
+  background-size: 400% 400%;
+  animation: bgMove 18s ease infinite;
+}
+
+@keyframes bgMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 header {
