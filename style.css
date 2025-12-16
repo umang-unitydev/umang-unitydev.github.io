@@ -414,7 +414,12 @@ body {
   font-family: 'Segoe UI', sans-serif;
   color: #e5e7eb;
 
-  background: red !important;
+  background: linear-gradient(
+    120deg,
+    #020617,
+    #001f3f,
+    #020617
+  ) !important;
   background-size: 400% 400%;
   animation: bgMove 18s ease infinite;
 }
