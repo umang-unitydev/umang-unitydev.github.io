@@ -312,7 +312,27 @@
   });
 </script>
 
-  <div class="neon-cursor"></div>
+<div class="neon-cursor"></div>
+
+<script>
+  const neonCursor = document.querySelector(".neon-cursor");
+
+  document.addEventListener("mousemove", (e) => {
+    neonCursor.style.left = e.clientX + "px";
+    neonCursor.style.top = e.clientY + "px";
+  });
+</script>
+
+<script>
+  document.querySelectorAll("a, button, .project-card").forEach(el => {
+    el.addEventListener("mouseenter", () => {
+      neonCursor.style.transform = "translate(-50%, -50%) scale(1.8)";
+    });
+    el.addEventListener("mouseleave", () => {
+      neonCursor.style.transform = "translate(-50%, -50%) scale(1)";
+    });
+  });
+</script>
   
 </body>
 </html>
