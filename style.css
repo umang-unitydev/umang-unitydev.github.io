@@ -98,7 +98,7 @@ a {
 .hero {
   text-align: center;
   padding: 70px 20px;
-  background: transparent;
+  background: linear-gradient(180deg, #020617, #000);
 }
 
 .profile-img {
