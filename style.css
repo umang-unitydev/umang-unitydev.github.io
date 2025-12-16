@@ -113,8 +113,20 @@ a {
 }
 
 .tagline {
+  font-size: 16px;
   color: #94a3b8;
-  font-size: 18px;
+  margin-top: 10px;
+}
+
+.cursor {
+  color: #38bdf8;
+  font-weight: bold;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
 }
 
 .projects-grid {
