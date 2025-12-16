@@ -235,7 +235,7 @@
 </script>
 
 <script>
-  const texts = [
+  const words = [
     "Unity Game Developer",
     "C# Programmer",
     "Android Game Developer",
@@ -243,30 +243,39 @@
     "AR / VR Developer"
   ];
 
-  let count = 0;
-  let index = 0;
-  let currentText = "";
-  let letter = "";
+  let wordIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+  const typingSpeed = 90;
+  const deletingSpeed = 50;
+  const pauseTime = 1500;
 
-  (function type() {
-    if (count === texts.length) {
-      count = 0;
+  const typingElement = document.getElementById("typing");
+
+  function typeEffect() {
+    const currentWord = words[wordIndex];
+
+    if (!isDeleting) {
+      typingElement.textContent = currentWord.substring(0, charIndex + 1);
+      charIndex++;
+
+      if (charIndex === currentWord.length) {
+        setTimeout(() => isDeleting = true, pauseTime);
+      }
+    } else {
+      typingElement.textContent = currentWord.substring(0, charIndex - 1);
+      charIndex--;
+
+      if (charIndex === 0) {
+        isDeleting = false;
+        wordIndex = (wordIndex + 1) % words.length;
+      }
     }
 
-    currentText = texts[count];
-    letter = currentText.slice(0, ++index);
+    setTimeout(typeEffect, isDeleting ? deletingSpeed : typingSpeed);
+  }
 
-    document.getElementById("typing").textContent = letter;
-
-    if (letter.length === currentText.length) {
-      setTimeout(() => {
-        index = 0;
-        count++;
-      }, 1500);
-    }
-
-    setTimeout(type, 100);
-  })();
+  typeEffect();
 </script>
   
 </body>
