@@ -82,6 +82,13 @@ a {
   background: transparent;
 }
 
+.profile-tilt {
+  width: 180px;
+  height: 180px;
+  margin: 0 auto 20px;
+  perspective: 800px;
+}
+
 .profile-img {
   width: 150px;
   height: 150px;
@@ -90,6 +97,15 @@ a {
   box-shadow: 0 0 25px #38bdf8;
   margin-bottom: 20px;
   object-fit: cover;
+
+  transition: 
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+
+  transform-style: preserve-3d;
+
+  box-shadow:
+    0 0 0 rgba(0,255,255,0.0);
 
   animation: pulse 3s infinite;
 }
@@ -104,6 +120,17 @@ a {
   100% {
     box-shadow: 0 0 15px #38bdf8;
   }
+}
+
+.profile-tilt:hover .profile-img {
+  transform:
+    scale(1.08)
+    rotateX(8deg)
+    rotateY(-8deg);
+
+  box-shadow:
+    0 0 20px rgba(0,255,255,0.6),
+    0 0 40px rgba(0,255,255,0.25);
 }
 
 .hero h1 {
