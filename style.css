@@ -30,6 +30,18 @@ section {
   padding: 30px;
 }
 
+section {
+  position: relative;
+  padding: 60px 30px;
+  margin: 40px 20px;
+  border-radius: 18px;
+
+  background: rgba(2, 6, 23, 0.75);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(56, 189, 248, 0.15);
+  box-shadow: 0 0 40px rgba(0, 229, 255, 0.08);
+}
+
 h1, h2 {
   color: #38bdf8;
 }
@@ -384,5 +396,37 @@ html {
 
   .nav-links.show {
     display: flex;
+  }
+}
+
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0,229,255,0.15), transparent 70%);
+  z-index: -1;
+  animation: floatGlow 20s infinite alternate;
+}
+
+body::before {
+  top: -150px;
+  left: -150px;
+}
+
+body::after {
+  bottom: -150px;
+  right: -150px;
+  animation-delay: 5s;
+}
+
+@keyframes floatGlow {
+  from {
+    transform: translateY(0px) translateX(0px);
+  }
+  to {
+    transform: translateY(60px) translateX(40px);
   }
 }
