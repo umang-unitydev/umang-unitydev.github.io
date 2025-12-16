@@ -87,6 +87,8 @@ a {
   height: 180px;
   margin: 0 auto 20px;
   perspective: 800px;
+  margin-bottom: 8px;
+  transform: translateY(6px);
 }
 
 .profile-img {
@@ -276,6 +278,7 @@ a {
 
 .hero h1 {
   animation: slideDown 1s ease forwards;
+  margin-top: 6px;
 }
 
 .tagline {
