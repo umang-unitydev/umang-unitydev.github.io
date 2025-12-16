@@ -1,23 +1,4 @@
-body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  color: #e5e7eb;
 
-  background: linear-gradient(
-    120deg,
-    #020617,
-    #001f3f,
-    #020617
-  ) !important;
-  background-size: 400% 400%;
-  animation: bgMove 18s ease infinite;
-}
-
-@keyframes bgMove {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
 
 header {
   background: #020617;
@@ -428,4 +409,25 @@ body::after {
   to {
     transform: translateY(60px) translateX(40px);
   }
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  color: #e5e7eb;
+
+  background: linear-gradient(
+    120deg,
+    #020617,
+    #001f3f,
+    #020617
+  ) !important;
+  background-size: 400% 400%;
+  animation: bgMove 18s ease infinite;
+}
+
+@keyframes bgMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
