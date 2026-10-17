@@ -199,13 +199,13 @@ a {
   box-shadow: 0 0 30px rgba(0, 229, 255, 0.5);
 }
 
-.tilt-card {
+.tilt- {
   transform-style: preserve-3d;
   transition: transform 0.15s ease, box-shadow 0.15s ease;
   will-change: transform;
 }
 
-.tilt-card::after {
+.tilt-::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -220,7 +220,7 @@ a {
   pointer-events: none;
 }
 
-.tilt-card:hover::after {
+.tilt-:hover::after {
   opacity: 1;
 }
 
@@ -318,7 +318,7 @@ a {
 }
 
 .project-card:hover .project-thumb {
-  transform: scale(1.01);
+  transform: scale(0.6);
   box-shadow: 0 0 30px rgba(0, 229, 255, 0.7);
 }
 
