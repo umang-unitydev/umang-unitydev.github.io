@@ -318,7 +318,7 @@ a {
 }
 
 .project-card:hover .project-thumb {
-  transform: scale(1.06);
+  transform: scale(1.01);
   box-shadow: 0 0 30px rgba(0, 229, 255, 0.7);
 }
 
